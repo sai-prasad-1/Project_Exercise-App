@@ -1,44 +1,36 @@
 import React from 'react';
-import { Box,Typography,Button } from '@mui/material';
-import HeroBannerImg from "../assets/images/banner.png";
+import { toast } from 'react-toastify';
 const HeroBanner:React.FC = () => {
+
+  const sendMail=():void=>{
+    console.log("hii")  
+  }
+
   return (
-    <Box sx={{
-      mt:{lg:'212px',xs:'70px'},
-      ml:{sm:'50px'}
+    <div className='w-[100vw] h-[100vh]'>
+      <div className='w-full h-full herobg flex flex-col justify-center items-center'></div>
+      <div className='w-full h-full  top-0 absolute flex justify-center items-center md:flex-row flex-col'>
+      <div className='w-full h-full bg-overlay'></div>
 
-    }} position="relative" p="20px">
-      <Typography color="#FF2625" fontWeight={"600"} fontSize="26px">
-        Fitness Club
-      </Typography>
-      <Typography fontWeight={"700"} sx={{
-        fontSize:{lg:"44px",sx:"40px"}
-      }} 
-      mb="23px"
-      mt="30px"
-      >
-        Smile Sweat <br/>and Repeat
-      </Typography>
-      <Typography fontSize={'22px'} lineHeight="35px" mb={4}>
-        check out most effective exersises
-      </Typography>
-      <Button variant="contained" color="error" 
-      sx={{backgroundColor:"#ff2526",padding:"10px"}}>
-        Explore Exercises
-      </Button>
-      <Typography
-      fontWeight={"600"}
-      color="#ff2625"
-      sx={{
-        opacity:0.15,
-        display:{lg:"block",xs:'none'}
-      }}
-      fontSize='200px'>
-        Exercises
+      <div className='w-full h-full bg-[#111213ea] shadow-2xl flex items-center justify-center flex-col md:mb-0 mb-[-15%]'>
+        <div className='md:w-[75%] w-[90%]  h-full flex flex-col justify-center '>
+        <h1 className=" text-white md:text-6xl text-3xl font-black">You Only Fail <br /> When you Stop <br />Trying </h1>
 
-      </Typography>
-      <img src={HeroBannerImg} alt="Hero" className='hero-banner-img' />
-    </Box>
+        <h4 className='text-gray-300 mt-6'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi officia modi sint voluptatibus libero maiores.</h4>
+        
+        <div className="mt-7 space-x-5">
+
+        <button className='button--gradient p-3' onClick={()=>sendMail()}>Get Started Now</button>
+        <button className='text-orange-400 p-3'>Get Started Now</button>
+
+        </div>
+        
+        </div>
+
+      </div>
+
+      </div>
+    </div>
   )
 }
 

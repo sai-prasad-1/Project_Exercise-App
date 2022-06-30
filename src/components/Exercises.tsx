@@ -35,7 +35,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
   
-    const paginate = (event, value:any) => {
+    const paginate = (event:any, value:any) => {
       setCurrentPage(value);
   
       window.scrollTo({ top: 1800, behavior: 'smooth' });
@@ -43,17 +43,18 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
   
   return (
     
-    <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
-    <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
-    <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
+    <div className='w-full flex  flex-col justify-center items-center flex-wrap bg-[#101112f5]'>
+    <h1 className='text-orange-400 text-6xl mt-11 mb-11
+    '>Showing Results</h1>
+    <div className='w-full flex justify-center items-center flex-wrap gap-7'>
       {currentExercises.map((exercise, idx) => (
         <ExerciseCard key={idx} item={exercise} />
       ))}
-    </Stack>
-    <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
+    </div>
+    <div className='mt-11 pb-11' >
       {exercises.length > 9 && (
         <Pagination
-          color="standard"
+          color="secondary"
           shape="rounded"
           defaultPage={1}
           count={Math.ceil(exercises.length / exercisesPerPage)}
@@ -62,8 +63,8 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
           size="large"
         />
       )}
-    </Stack>
-  </Box>
+    </div>
+  </div>
     
   )
 }

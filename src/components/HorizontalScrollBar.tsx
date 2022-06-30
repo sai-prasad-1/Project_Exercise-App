@@ -1,24 +1,26 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Pagination } from "@mui/material";
 import BodyPart from "./BodyPart";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";
 import 'swiper/css';
+import ExerciseCard from "./ExerciseCard";
 
 
 interface Props {  data: any[];
-    bodyPart: string;
-    setBodyPart: React.Dispatch<React.SetStateAction<string>>
+    bodyPart?: string;
+    setBodyPart?: React.Dispatch<React.SetStateAction<string>>
+  
 }
 const HorizontalScrollBar = ({ data,bodyPart,setBodyPart }: Props) => {
   return (
-    <div>
+    <div className="flex items-center justify-center">
          <Swiper
          navigation={true}
           modules={[Navigation]}
         spaceBetween={50}
         slidesPerView={3}
-        breakpoints={{
+      breakpoints={{
         320: {
           slidesPerView: 1.5,
         },
@@ -28,10 +30,11 @@ const HorizontalScrollBar = ({ data,bodyPart,setBodyPart }: Props) => {
       }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
+      className="w-[90%]"
     >
       {data.map((item) => {
         return<SwiperSlide> <Box key={item.id||item} >
-            <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+            {bodyPart && setBodyPart ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard item={item} /> }
         </Box>
         </SwiperSlide>;
       })}

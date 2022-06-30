@@ -1,6 +1,6 @@
 
 import {Routes, Route} from 'react-router-dom'
-import { Box } from '@mui/material';
+import { ToastContainer } from 'react-toastify';
 
 
 import Home from './pages/Home';
@@ -11,14 +11,15 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-   <Box width='400px'  sx={{ width: { xl: '1488px' } }} m="auto">
+   <div className='overflow-x-clip'>
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/exersise/:id" element={<ExersiseDetails/>} />
     </Routes>
     <Footer/>
-   </Box>
+    <ToastContainer />
+   </div>
   )
 }
 

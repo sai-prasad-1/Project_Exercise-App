@@ -1,26 +1,28 @@
-import React from 'react'
-import {Link} from "react-router-dom";
-import {Button,Stack,Typography} from "@mui/material"
 
+import {Link} from "react-router-dom";
 interface Props{
     item:any,
 }
 
+
+function capitalizeFirstLetter(string:string):string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 const ExerciseCard = ({item }:Props) => {
   return (
-    <Link to={`/exercise/${item.id}`}  className="exercise-card">
-        <img src={item.gifUrl} alt={item.name} loading="lazy" />
-        <Stack direction="row">
-      <Button sx={{ ml: '21px', color: '#fff', background: '#FFA9A9', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize' }}>
+    <Link to={`/exersise/${item.id}`}  className="exercise-card border-[1px] border-orange-400 flex flex-col items-center justify-center rounded-lg">
+        <img src={item.gifUrl} alt={item.name} loading="lazy" className='mt-7 rounded-lg' />
+        <div className='flex w-full justify-center items-center space-x-7  mt-6'>
+      <button className='p-3 bg-orange-300 rounded-full'>
         {item.bodyPart}
-      </Button>
-      <Button sx={{ ml: '21px', color: '#fff', background: '#FCC757', fontSize: '14px', borderRadius: '20px', textTransform: 'capitalize' }}>
+      </button>
+      <button className='p-3 bg-red-300 rounded-full'>
         {item.target}
-      </Button>
-    </Stack>
-    <Typography ml="21px" color="#000" fontWeight="bold" sx={{ fontSize: { lg: '24px', xs: '20px' } }} mt="11px" pb="10px" textTransform="capitalize">
-      {item.name}
-    </Typography>
+      </button>
+    </div>
+    <h1 className='text-orange-400 text-2xl mb-5 mt-5'>
+      {capitalizeFirstLetter(item.name)}
+    </h1>
     </Link>
   )
 }

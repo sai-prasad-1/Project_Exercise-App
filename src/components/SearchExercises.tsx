@@ -15,7 +15,6 @@ interface Props{
   bodyPart: string,
   setExersise: React.Dispatch<React.SetStateAction<string[]>>,
 }
-
 const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
 
 
@@ -25,7 +24,7 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
 
   useEffect(() => {
     const fetchExersiseData = async () => {
-      const bodypartsData:string[] = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',Exersiseoptions);
+      const bodypartsData:string[] =["back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist"]
       setBodyParts(["all",...bodypartsData])
       console.log(bodypartsData);
       
@@ -49,57 +48,36 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
   }
   return (
     <React.Fragment>
-    <Stack alignItems={"center"} justifyContent="center" p="20px" mt="37px">
-      <Typography
-        fontWeight={"700"}
-        sx={{
-          fontSize: { lg: "44px", xs: "30px" },
-        }}
-        mb="50px"
-        textAlign={"center"}
-      >
-        Awesome Exersise You <br /> Should Know
-      </Typography>
-      <Box position={"relative"} mb="72px">
-        <TextField
-          sx={{
-            height: "76px",
-            input: { fontWeight: "700", border: "none", borderRadius: "4px" },
-            width:{lg: "800px", xs: "350px"},
-            backgroundColor: "#FFF",
-            borderRadius: "40px",
-          }}
+    <div className="relative pb-9 search--bg z-10">
+      <div className="absolute top-0 left-0 bg-[#111213ea] w-full h-full "></div>
+      <div className="w-full min-h-[50vh]  flex flex-col justify-center items-center ">
+      <h3 className="md:text-5xl font-bold text-orange-400 mb-7 z-10">
+        Dive into the world of Exercises
+      </h3>
+      <div className="w-full flex justify-center items-center z-10">
+        <input
           value={search}
           onChange={(e) => {
             setSearch(e.target.value.toLowerCase());
           }}
           placeholder="Search Exercises"
+          className="w-[40%] p-2"
         />
-        <Button className="search-btn"
-        sx={{
-          bgcolor:"#FF2635",
-          color:"#FFF",
-          textTransform: "none",
-          width:{lg: "175px", xs: "80px"},
-          fontSize: {lg: "20px", xs: "14px"},
-          height: "56px",
-          position: "absolute",
-          right: "0",
-           
-        }}
+        <button className="p-2 pl-4 pr-4 w bg-orange-400 z-10"
+        
         onClick={handelSearch}>
           Search
-        </Button>
-      </Box>
-
-      <Box sx={{
-        postion:"relative",
-        width:"100%",
-        p:"20px"
-      }}>
+        </button>
+        </div>
+        <h1 className="md:text-3xl font-bold text-orange-400 mt-7 text-center z-[100]">
+        Select Catagery
+      </h1>
+      </div>
+     
+      <div className="z-50">
         <HorizontalScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
-      </Box>
-    </Stack></React.Fragment>
+      </div>
+    </div></React.Fragment>
   );
 };
 

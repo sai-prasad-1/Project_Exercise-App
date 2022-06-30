@@ -1,26 +1,38 @@
 
-import { Link } from 'react-router-dom';
-import { Stack } from '@mui/material';
+import { ReactElement, useState } from 'react';
+import logo from "../assets/icons/Logo.png"
 
-import Logo from '../assets/images/Logo.png';
-import { ReactElement } from 'react';
+const navLinks:string[][] = [['Home',"/"],["BMI Calculator","#bmi"],["About","#about"],["Contact Us"]]
 
-const Navbar: React.FC = (): ReactElement => (
-  <Stack direction="row" justifyContent="space-around" sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }} px="20px">
-    <Link to="/">
-      <img src={Logo} alt="logo" style={{ width: '48px', height: '48px', margin: '0px 20px' }} />
-    </Link>
-    <Stack
-      direction="row"
-      gap="40px"
-      fontFamily="Alegreya"
-      fontSize="24px"
-      alignItems="flex-end"
-    >
-      <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-      <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
-    </Stack>
-  </Stack>
-);
+
+
+const Navbar: React.FC = (): ReactElement => {
+
+  const [active, setActive] = useState<string>("Home")
+  return(
+
+  <div  className='z-50 w-[90vw] h-[50px] mt-9 absolute top-0 flex justify-between items-center '>
+    <div className=' h-full m-8 w-[40%]'>
+          <img src={logo} alt="Logo" className='w-[150px]'/>
+    </div>
+    <div className='h-full w-[40%]  flex justify-center items-center'>
+      <div className="flex w-full justify-between text-white">
+      {
+        navLinks.map((item)=>{
+          return(
+            <a className={`${item[0]==active?"border-orange-400  border-b-2":"border-none"} cursor-pointer p-2`} onClick={()=>setActive(item[0])}>
+              {item[0]}
+            </a>
+          )
+        })
+      }
+      <button className='bg-orange-400 p-2 text-black ml-2  mr-0'>
+        Login / Register
+      </button>
+      </div>
+    </div>
+
+  </div>
+)};
 
 export default Navbar;

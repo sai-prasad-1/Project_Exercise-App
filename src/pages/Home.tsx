@@ -8,11 +8,11 @@ const Home = () => {
   const [bodyPart, setBodyPart] = useState<string>("all");
 
   return (
-    <Box>
+    <div>
       <HeroBanner/>
       <SearchExercises setExersise={setExersise} setBodyPart={setBodyPart} bodyPart={bodyPart}/>
       <Exercises setExersise={setExersise} exercises={exercises} bodyPart={bodyPart}/>
-    </Box>
+    </div>
   )
 }
 

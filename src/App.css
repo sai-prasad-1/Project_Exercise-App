@@ -14,68 +14,40 @@ body {
   width: 0px;
 }
 
-.right-arrow,
-.left-arrow {
-  cursor: pointer;
-  background: transparent;
-  outline: none;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FF2625;
-  font-size: 25px;
-  border-radius: 4px;
-  position: absolute;
-  bottom: -20px;
-  right: 80px;
-  transform: scale(1, 1);
-  transition: 0.3s all ease-in-out;
+.search--bg{
+  background: url("./assets/images/img2.jpg")  no-repeat center center ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.right-arrow {
-  right: 140px;
+.herobg{
+  background: url("./assets/images/hero-2.jpg")  no-repeat center center ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.right-arrow:hover,
-.left-arrow:hover {
-  transform: scale(1.3, 1.3);
-}
-
-.react-horizontal-scrolling-menu--wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.detail-image {
-  width: 729px;
-  height: 742px;
-}
-
-.hero-banner-img {
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  width: 700px;
-  height: 900px;
-  margin-top: -330px;
+.button--gradient{
+  background: #d1810f;
 
 }
+
+.button--gradient:hover{
+  background-image: linear-gradient(to left top, #ff9800, #d1810f, #a66a16, #7e5419, #583e1a);
+
+}
+
+
+
+
+
 
 .exercise-card {
   width: 400px;
-  height: 445px;
-  background: #fff;
-  border-top: 4px solid #FF2625;
-  border-bottom-left-radius: 20px;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-bottom: 10px;
-  transform: scale(1, 1);
-  transition: 0.3s all ease-in-out;
+  height: auto;
 }
 
 .exercise-card img {
@@ -87,10 +59,6 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.exercise-card:hover,
-.bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
-}
 
 .search-btn:hover {
   color: #FF2625 !important;
