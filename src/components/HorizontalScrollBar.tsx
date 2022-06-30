@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Pagination } from "@mui/material";
+import { Box} from "@mui/material";
 import BodyPart from "./BodyPart";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper";

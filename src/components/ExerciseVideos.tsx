@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography, Box, Stack } from '@mui/material';
 interface Props{
     exerciseVideos: any[];
