@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+
 const HeroBanner:React.FC = () => {
 
   const sendMail=():void=>{

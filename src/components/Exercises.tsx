@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import Pagination from '@mui/material/Pagination'
-import {Box,Stack,Typography} from '@mui/material'
 import { fetchData,Exersiseoptions } from "../utils/fetchData";
 import ExerciseCard from './ExerciseCard';
 
@@ -35,7 +34,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
   
-    const paginate = (event:any, value:any) => {
+    const paginate = (value:any) => {
       setCurrentPage(value);
   
       window.scrollTo({ top: 1800, behavior: 'smooth' });

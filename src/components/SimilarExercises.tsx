@@ -1,5 +1,4 @@
-import React from 'react';
-import { Typography, Box, Stack } from '@mui/material';
+import { Typography, Box} from '@mui/material';
 
 import HorizontalScrollBar from './HorizontalScrollBar';
 const Loader= ()=>{

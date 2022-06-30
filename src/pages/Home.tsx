@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Box } from "@mui/system"
+import { useState } from "react"
+
 import HeroBanner from "../components/HeroBanner"
 import Exercises from "../components/Exercises"
 import SearchExercises from "../components/SearchExercises"

@@ -1,1 +1,1 @@
-console.log("hi");
+export const  hi = "hi"
