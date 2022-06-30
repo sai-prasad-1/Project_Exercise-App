@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3083ffc5-0703-4105-82fd-c6b037e548a4/deploy-status)](https://app.netlify.com/sites/hanoverfitness/deploys)
