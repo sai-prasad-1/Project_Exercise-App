@@ -38,13 +38,14 @@ const ExersiseDetails = () => {
 
     fetchExercisesData();
   }, [id]);
+  document.body.style.backgroundColor = "black"
 
   return (
-    <Box>
+    <div className="bg-blac">
       <Detail exerciseDetail={exerciseDetail}/>
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
       <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
-    </Box>
+    </div>
   )
 }
 

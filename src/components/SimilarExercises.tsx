@@ -16,20 +16,20 @@ console.log(targetMuscleExercises)
 console.log(equipmentExercises)
 
 return(
-  <Box sx={{ mt: { lg: '100px', xs: '0px' } }}>
-    <Typography sx={{ fontSize: { lg: '44px', xs: '25px' }, ml: '20px' }} fontWeight={700} color="#000" mb="33px">
-      Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Target Muscle</span> exercises
-    </Typography>
+  <div >
+    <h1 className='text-5xl mb-11 text-center mt-11 text-orange-100'>
+      Similar <span className="text-orange-400" style={{  textTransform: 'capitalize' }}>Target Muscle</span> exercises
+    </h1>
  
       {targetMuscleExercises.length !== 0 ? <HorizontalScrollBar data={targetMuscleExercises} /> : <Loader />}
    
-    <Typography sx={{ fontSize: { lg: '44px', xs: '25px' }, ml: '20px', mt: { lg: '100px', xs: '60px' } }} fontWeight={700} color="#000" mb="33px">
-      Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Equipment</span> exercises
-    </Typography>
+    <h1 className='text-5xl mb-11 text-center mt-11 text-orange-100'>
+      Similar <span className="text-orange-400" style={{ textTransform: 'capitalize' }}>Equipment</span> exercises
+    </h1>
     
       {equipmentExercises.length !== 0 ? <HorizontalScrollBar data={equipmentExercises} /> : <Loader />}
    
-  </Box>
+  </div>
 )};
 
 export default SimilarExercises;

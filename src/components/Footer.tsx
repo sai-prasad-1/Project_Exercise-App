@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 const Footer:React.FC = ():ReactElement => {
   return (
-    <div>Footer</div>
+    <div className="min-h-[50vh] text-6xl text-center text-white">Footer</div>
   )
 }
 

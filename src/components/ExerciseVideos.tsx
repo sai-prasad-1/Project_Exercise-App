@@ -8,11 +8,11 @@ const ExerciseVideos = ({ exerciseVideos, name }:Props) => {
   if (!exerciseVideos) return <h1>Loading</h1>;
 
   return (
-    <Box sx={{ marginTop: { lg: '203px', xs: '20px' } }} p="20px">
-      <Typography sx={{ fontSize: { lg: '44px', xs: '25px' } }} fontWeight={700} color="#000" mb="33px">
-        Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{name}</span> exercise videos
-      </Typography>
-      <Stack sx={{ flexDirection: { lg: 'row' }, gap: { lg: '110px', xs: '0px' } }} justifyContent="flex-start" flexWrap="wrap" alignItems="center">
+    <div>
+      <h1 className='text-5xl mb-11 text-center mt-11 text-orange-100'>
+        Watch <span style={{ textTransform: 'capitalize' }} className="text-orange-400">{name}</span> exercise videos
+      </h1>
+      <div className='flex flex-wrap justify-around'>
         {exerciseVideos?.slice(0, 3)?.map((item, index) => (
           <a
             key={index}
@@ -21,19 +21,19 @@ const ExerciseVideos = ({ exerciseVideos, name }:Props) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img style={{ borderTopLeftRadius: '20px' }} src={item.video.thumbnails[0].url} alt={item.video.title} />
-            <Box>
-              <Typography sx={{ fontSize: { lg: '28px', xs: '18px' } }} fontWeight={600} color="#000">
+            <img  src={item.video.thumbnails[0].url} alt={item.video.title} />
+            <div>
+              <h1 className='text-orange-400 text-xl'>
                 {item.video.title}
-              </Typography>
-              <Typography fontSize="14px" color="#000">
+              </h1>
+              <h2 className='text-xs'>
                 {item.video.channelName}
-              </Typography>
-            </Box>
+              </h2>
+            </div>
           </a>
         ))}
-      </Stack>
-    </Box>
+      </div>
+    </div>
   );
 };
 

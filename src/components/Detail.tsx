@@ -1,5 +1,7 @@
 import { Typography, Stack, Button } from '@mui/material';
 
+
+
 import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
@@ -25,32 +27,34 @@ const Detail = ({ exerciseDetail }:Props) => {
       name: equipment,
     },
   ];
-
+ 
   return (
-    <Stack gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
+    <div className="pt-5 flex w-full justify-around items-center text-orange-100">
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
-      <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
-        <Typography sx={{ fontSize: { lg: '64px', xs: '30px' } }} fontWeight={700} textTransform="capitalize">
+      <div className='flex flex-col justify-end pt-11 pb-11 '>
+        <h1 className='text-5xl font-semibold text-orange-400'>
           {name}
-        </Typography>
-        <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} color="#4F4C4C">
+        </h1>
+        <h3 className='mt-5'>
           Exercises keep you strong.{' '}
           <span style={{ textTransform: 'capitalize' }}>{name}</span> bup is one
           of the best <br /> exercises to target your {target}. It will help you improve your{' '}
           <br /> mood and gain energy.
-        </Typography>
+        </h3>
+        <div className='flex justify-around mt-11'> 
         {extraDetail?.map((item) => (
-          <Stack key={item.name} direction="row" gap="24px" alignItems="center">
-            <Button sx={{ background: '#FFF2DB', borderRadius: '50%', width: '100px', height: '100px' }}>
+          <div key={item.name} className="text-center ">
+            <button className='rounded-full bg-orange-300 p-5 '>
               <img src={item.icon} alt={bodyPart} style={{ width: '50px', height: '50px' }} />
-            </Button>
-            <Typography textTransform="capitalize" sx={{ fontSize: { lg: '30px', xs: '20px' } }}>
+            </button>
+            <h1 className='text text-2xl mt-1' style={{ textTransform: 'capitalize' }} >
               {item.name}
-            </Typography>
-          </Stack>
+            </h1>
+          </div>
         ))}
-      </Stack>
-    </Stack>
+        </div>
+      </div>
+    </div>
   );
 };
 
