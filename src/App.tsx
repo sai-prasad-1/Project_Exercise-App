@@ -1,6 +1,7 @@
 
 import {Routes, Route} from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
+import AboutUs from './components/AboutUs';
 
 
 import Home from './pages/Home';
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/exersise/:id" element={<ExersiseDetails/>} />
+      <Route path='/bmi' element={<AboutUs/>} />
     </Routes>
     <Footer/>
     <ToastContainer />
