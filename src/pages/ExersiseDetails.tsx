@@ -1,7 +1,5 @@
 import {useEffect,useState} from"react"
-import { useParams } from "react-router-dom"
-import { Box } from "@mui/system";
-
+import { useParams } from "react-router-dom";
 import { Exersiseoptions,fetchData,youtubeOptions } from "../utils/fetchData";
 import Detail from "../components/Detail";
 import ExerciseVideos from "../components/ExerciseVideos";

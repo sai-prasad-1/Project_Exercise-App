@@ -53,7 +53,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
     <div className='mt-11 pb-11' >
       {exercises.length > 9 && (
         <Pagination
-          color="secondary"
+          classes={{ul:"bg-orange-400 rounded-full"}}
           shape="rounded"
           defaultPage={1}
           count={Math.ceil(exercises.length / exercisesPerPage)}

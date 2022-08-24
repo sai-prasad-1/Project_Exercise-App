@@ -30,7 +30,7 @@ const Navbar: React.FC = (): ReactElement => {
         })
       }
       <button className='bg-orange-400 p-2 text-black ml-2  mr-0'>
-        Login / Register
+        Join Now
       </button>
       </div>
     </div>

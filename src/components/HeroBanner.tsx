@@ -20,8 +20,8 @@ const HeroBanner:React.FC = () => {
         
         <div className="mt-7 space-x-5">
 
-        <button className='button--gradient p-3' onClick={()=>sendMail()}>Get Started Now</button>
-        <button className='text-orange-400 p-3'>Get Started Now</button>
+        <button className='bg-orange-400  p-3' onClick={()=>sendMail()}>Join The Tribe Now</button>
+       
 
         </div>
         

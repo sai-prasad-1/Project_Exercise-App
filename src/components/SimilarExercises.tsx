@@ -1,4 +1,3 @@
-import { Typography, Box} from '@mui/material';
 
 import HorizontalScrollBar from './HorizontalScrollBar';
 const Loader= ()=>{

@@ -1,4 +1,4 @@
-import { Typography, Box, Stack } from '@mui/material';
+
 interface Props{
     exerciseVideos: any[];
     name:string
