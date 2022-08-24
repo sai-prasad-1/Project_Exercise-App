@@ -3,13 +3,11 @@ import HorizontalScrollBar from './HorizontalScrollBar';
 const Loader= ()=>{
   return <div>Loading</div>
 }
-
 interface Props{
   targetMuscleExercises: any[],
   equipmentExercises: any[];
 
 }
-
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }:Props) => {
 console.log(targetMuscleExercises)
 console.log(equipmentExercises)
