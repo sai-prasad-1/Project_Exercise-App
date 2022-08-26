@@ -14,7 +14,7 @@ const HeroBanner:React.FC = () => {
 
       <div className='w-full h-full bg-[#111213ea] shadow-2xl flex items-center justify-center flex-col md:mb-0 mb-[-15%]'>
         <div className='md:w-[75%] w-[90%]  h-full flex flex-col justify-center '>
-        <h1 className=" text-white md:text-6xl text-3xl font-black">You Only Fail <br /> When you Stop <br />Trying </h1>
+        <h1 className=" text--gradient md:text-6xl text-3xl font-black">You Only Fail <br /> When you Stop <br />Trying </h1>
 
         <h4 className='text-gray-300 mt-6'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi officia modi sint voluptatibus libero maiores.</h4>
         

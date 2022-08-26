@@ -1,3 +1,10 @@
+.text--gradient{
+    font-size: 72px;
+    background: linear-gradient(0deg, rgba(135,9,9,1) 0%, rgba(253,187,45,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 @tailwind base;
 @tailwind components;

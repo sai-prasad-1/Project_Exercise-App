@@ -25,7 +25,7 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
     const fetchExersiseData = async () => {
       const bodypartsData:string[] =["back", "cardio", "chest", "lower arms", "lower legs", "neck", "shoulders", "upper arms", "upper legs", "waist"]
       setBodyParts(["all",...bodypartsData])
-      console.log(bodypartsData);
+      
       
     }
 
@@ -50,7 +50,7 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
     <div className="relative pb-9 search--bg z-10">
       <div className="absolute top-0 left-0 bg-[#111213ea] w-full h-full "></div>
       <div className="w-full min-h-[50vh]  flex flex-col justify-center items-center ">
-      <h3 className="md:text-5xl font-bold text-orange-400 mb-7 z-10">
+      <h3 className="md:text-5xl font-bold text--gradient mb-7 z-10">
         Dive into the world of Exercises
       </h3>
       <div className="w-full flex justify-center items-center z-10">

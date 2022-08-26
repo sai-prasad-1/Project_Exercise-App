@@ -34,8 +34,10 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
   
-    const paginate = (value:any) => {
+    const paginate = (event:any,value:any) => {
       setCurrentPage(value);
+      console.log(event);
+      
   
       window.scrollTo({ top: 1800, behavior: 'smooth' });
     };

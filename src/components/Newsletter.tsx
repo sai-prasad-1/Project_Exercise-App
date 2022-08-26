@@ -4,8 +4,8 @@ import img from "../assets/images/footer_img.png"
 
 const Newsletter = () => {
   return (
-    <div className="top grid grid-cols-2 bg-black">
-    <div className="grid place-content-center h-full space-y-6 w-full" >
+    <div className="top grid grid-cols-2 bg-black min-h-[60vh]" id="newsletter">
+    <div className="grid place-content-center h-full space-y-11 w-[90%]" >
       <h1 className="text-orange-400 font-bold font-mono tracking-[10px]">NO CREDIT CARD REQUIRED</h1>
       <h1 className="text-5xl text-white text-start font-semibold">Start using Hanover Today</h1>
       <div className="relative w-full ">
