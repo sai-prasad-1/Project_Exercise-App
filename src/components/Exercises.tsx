@@ -4,7 +4,14 @@ import { fetchData,Exersiseoptions } from "../utils/fetchData";
 import ExerciseCard from './ExerciseCard';
 
 interface Props{
-  exercises: any[],
+  exercises: {
+    bodyPart:string,
+    equipment:string,
+    gifUrl:string,
+    id:string,
+    name:string,
+    target:string
+  }[],
   bodyPart: string,
   setExersise: React.Dispatch<React.SetStateAction<string[]>>,
 }
@@ -12,7 +19,6 @@ interface Props{
 const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
-
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
@@ -24,6 +30,8 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
       }
 
       setExersise(exercisesData);
+      
+      
     };
 
     fetchExercisesData();
@@ -34,11 +42,11 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
   
-    const paginate = (event:any,value:any) => {
+    const paginate = (_event:React.BaseSyntheticEvent,value:number) => {
+      console.log(event,"value");
+      
       setCurrentPage(value);
       
-      
-  
       window.scrollTo({ top: 1800, behavior: 'smooth' });
     };
   

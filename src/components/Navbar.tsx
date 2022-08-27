@@ -14,9 +14,9 @@ const Navbar: React.FC = (): ReactElement => {
   return(
 
   <div  className={`${path=="/"?"absolute ":"relative pb-11 mt-6 "} `+'z-50 w-[90vw] h-[50px] pt-9 top-0 flex justify-between items-center '}>
-    <div className=' h-full ml-8 mr-8 w-[40%] flex justify-ceter items-center'>
+    <a href="/" className=' h-full ml-8 mr-8 w-[40%] flex items-center'>
           <img src={logo} alt="Logo" className='w-[150px]'/>
-    </div>
+    </a>
     <div className='h-full w-[40%]  flex justify-center items-center'>
       <div className="md:flex w-full justify-between text-white hidden">
       {

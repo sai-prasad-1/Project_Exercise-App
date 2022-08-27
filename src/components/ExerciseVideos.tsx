@@ -1,11 +1,16 @@
 
 interface Props{
-    exerciseVideos: any[];
-    name:string
+    exerciseVideos :any[]
+    name:string | undefined
 }
+
+
 
 const ExerciseVideos = ({ exerciseVideos, name }:Props) => {
   if (!exerciseVideos) return <h1>Loading</h1>;
+  console.log(exerciseVideos);
+
+  
 
   return (
     <div>

@@ -5,13 +5,29 @@ import Detail from "../components/Detail";
 import ExerciseVideos from "../components/ExerciseVideos";
 import SimilarExercises from "../components/SimilarExercises";
 
-
+interface Exercises{
+  bodyPart:string ,
+  equipment:string,
+  gifUrl:string,
+  id:string,
+  name:string ,
+  target:string
+} 
 const ExersiseDetails = () => {
-  const [exerciseDetail, setExerciseDetail] = useState<any>([]);
+  const [exerciseDetail, setExerciseDetail] = useState<Exercises>({bodyPart: "back",
+  equipment: "barbell",
+  gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/1316.gif",
+  id: "1316",
+  name: "barbell bent arm pullover",
+  target: "lats",
+  });
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
   const [equipmentExercises, setEquipmentExercises] = useState([]);
   const { id } = useParams();
+
+  ;
+  
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,7 +56,7 @@ const ExersiseDetails = () => {
   return (
     <div className="bg-blac">
       <Detail exerciseDetail={exerciseDetail}/>
-      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
+      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail?.name} />
       <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
     </div>
   )

@@ -5,10 +5,18 @@ import EquipmentImage from '../assets/icons/equipment.png';
 
 
 interface Props{
-    exerciseDetail:any,
+    exerciseDetail:{
+      bodyPart:string | "blank",
+      equipment:string | "blank",
+      gifUrl:string | "blank",
+      id:string | "blank",
+      name:string | "blank",
+      target:string | "blank"
+    } 
 }
 const Detail = ({ exerciseDetail }:Props) => {
-  const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
+
+   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
 
   const extraDetail = [
     {
