@@ -11,7 +11,6 @@ const Navbar: React.FC = (): ReactElement => {
 
   const [active, setActive] = useState<string>("Home")
   const path:string =useLocation().pathname;
-  console.log(path)
   return(
 
   <div  className={`${path=="/"?"absolute ":"relative pb-11 mt-6 "} `+'z-50 w-[90vw] h-[50px] pt-9 top-0 flex justify-between items-center '}>
@@ -19,7 +18,7 @@ const Navbar: React.FC = (): ReactElement => {
           <img src={logo} alt="Logo" className='w-[150px]'/>
     </div>
     <div className='h-full w-[40%]  flex justify-center items-center'>
-      <div className="flex w-full justify-between text-white">
+      <div className="md:flex w-full justify-between text-white hidden">
       {
         navLinks.map((item)=>{
           return(

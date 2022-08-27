@@ -36,7 +36,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
   
     const paginate = (event:any,value:any) => {
       setCurrentPage(value);
-      console.log(event);
+      
       
   
       window.scrollTo({ top: 1800, behavior: 'smooth' });
@@ -45,7 +45,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
   return (
     
     <div className='w-full flex  flex-col justify-center items-center flex-wrap bg-[#101112f5]'>
-    <h1 className='text-orange-400 text-6xl mt-11 mb-11
+    <h1 className='text-orange-400 md:text-6xl text-3xl mt-11 mb-11
     '>Showing Results</h1>
     <div className='w-full flex justify-center items-center flex-wrap gap-7'>
       {currentExercises.map((exercise, idx) => (

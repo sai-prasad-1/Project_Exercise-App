@@ -37,8 +37,6 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
   const handelSearch=async()=>{
     if(search){
       const exercisedata = await fetchData('https://exercisedb.p.rapidapi.com/exercises',Exersiseoptions);
-
-      console.log(exercisedata);
       const serachdata = exercisedata.filter((exercise:ExersiseSearch) => exercise.name.toLowerCase().includes(search.toLowerCase()) || exercise.target.toLowerCase().includes(search.toLowerCase()) ||exercise.equipment.toLowerCase().includes(search.toLowerCase())||exercise.bodyPart.toLowerCase().includes(search.toLowerCase()));
       
       setSearch("")
@@ -50,7 +48,7 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
     <div className="relative pb-9 search--bg z-10">
       <div className="absolute top-0 left-0 bg-[#111213ea] w-full h-full "></div>
       <div className="w-full min-h-[50vh]  flex flex-col justify-center items-center ">
-      <h3 className="md:text-5xl font-bold text--gradient mb-7 z-10">
+      <h3 className="md:text-5xl text-4xl text-center font-bold text--gradient mb-7 z-10">
         Dive into the world of Exercises
       </h3>
       <div className="w-full flex justify-center items-center z-10">
@@ -60,7 +58,7 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
             setSearch(e.target.value.toLowerCase());
           }}
           placeholder="Search Exercises"
-          className="w-[40%] p-2"
+          className="md:w-[40%] w-[80%] p-2"
         />
         <button className="p-2 pl-4 pr-4 w bg-orange-400 z-10"
         
@@ -68,8 +66,8 @@ const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
           Search
         </button>
         </div>
-        <h1 className="md:text-3xl font-bold text-orange-400 mt-7 text-center z-[100]">
-        Select Catagery
+        <h1 className="md:text-3xl text-2xl font-bold text-orange-400 mt-7 text-center z-[100]">
+        Select Category
       </h1>
       </div>
      

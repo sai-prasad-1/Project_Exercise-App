@@ -4,10 +4,10 @@ import img from "../assets/images/footer_img.png"
 
 const Newsletter = () => {
   return (
-    <div className="top grid grid-cols-2 bg-black min-h-[60vh]" id="newsletter">
-    <div className="grid place-content-center h-full space-y-11 w-[90%]" >
-      <h1 className="text-orange-400 font-bold font-mono tracking-[10px]">NO CREDIT CARD REQUIRED</h1>
-      <h1 className="text-5xl text-white text-start font-semibold">Start using Hanover Today</h1>
+    <div className="top grid md:grid-cols-2 grid-cols-1 bg-black min-h-[60vh] place-content-center md:p-0  p-8" id="newsletter">
+    <div className="grid place-content-center h-full space-y-11 w-[90%] pl-6" >
+      <h1 className="text-orange-400 font-bold font-mono tracking-[10px] text-center">NO CREDIT CARD REQUIRED</h1>
+      <h1 className="md:text-5xl text-3xl text-white text-start font-semibold">Start using Hanover Today</h1>
       <div className="relative w-full ">
 
       <input type="email" className=" h-[50px] bg-transparent border-b-2 focus:border-orange-400 outline-none w-full text-orange-300 placeholder:text-orange-400" placeholder="Subscribe to our Newsletter"/>
@@ -16,7 +16,7 @@ const Newsletter = () => {
     </div>
 
 
-    <img src={img} alt="footer img"  className="w-[30vw] place-self-center" />
+    <img src={img} alt="footer img"  className="md:w-[30vw] w-[80vw] mt-7 md:mt-0 place-self-center" />
   </div>
   )
 }

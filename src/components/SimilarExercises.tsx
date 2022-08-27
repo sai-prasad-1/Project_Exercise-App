@@ -9,9 +9,6 @@ interface Props{
 
 }
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }:Props) => {
-console.log(targetMuscleExercises)
-console.log(equipmentExercises)
-
 return(
   <div >
     <h1 className='text-5xl mb-11 text-center mt-11 text-orange-100'>

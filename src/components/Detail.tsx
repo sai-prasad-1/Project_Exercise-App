@@ -26,9 +26,9 @@ const Detail = ({ exerciseDetail }:Props) => {
   ];
  
   return (
-    <div className="pt-5 flex w-full justify-around items-center text-orange-100">
+    <div className="pt-5 flex flex-col md:flex-row w-full justify-around items-center text-orange-100">
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
-      <div className='flex flex-col justify-end pt-11 pb-11 '>
+      <div className='flex flex-col justify-end md:pt-11 md:pb-11 p-11'>
         <h1 className='text-5xl font-semibold text-orange-400'>
           {name}
         </h1>
@@ -38,7 +38,7 @@ const Detail = ({ exerciseDetail }:Props) => {
           of the best <br /> exercises to target your {target}. It will help you improve your{' '}
           <br /> mood and gain energy.
         </h3>
-        <div className='flex justify-around mt-11'> 
+        <div className='flex flex-col md:flex-row justify-around mt-11'> 
         {extraDetail?.map((item) => (
           <div key={item.name} className="text-center ">
             <button className='rounded-full bg-orange-300 p-5 '>
