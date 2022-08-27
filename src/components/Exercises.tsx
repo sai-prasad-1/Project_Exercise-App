@@ -2,18 +2,18 @@ import React,{useState,useEffect} from 'react'
 import Pagination from '@mui/material/Pagination'
 import { fetchData,Exersiseoptions } from "../utils/fetchData";
 import ExerciseCard from './ExerciseCard';
-
+export interface ExercisesType{
+  bodyPart:string,
+  equipment:string,
+  gifUrl:string,
+  id:string,
+  name:string,
+  target:string
+}
 interface Props{
-  exercises: {
-    bodyPart:string,
-    equipment:string,
-    gifUrl:string,
-    id:string,
-    name:string,
-    target:string
-  }[],
+  exercises: ExercisesType[] | undefined,
   bodyPart: string,
-  setExersise: React.Dispatch<React.SetStateAction<string[]>>,
+  setExersise: React.Dispatch<React.SetStateAction<ExercisesType[] | undefined>>,
 }
 
 const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
@@ -38,9 +38,10 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
   }, [bodyPart]);
 
     // Pagination
+  
     const indexOfLastExercise = currentPage * exercisesPerPage;
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-    const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+    const currentExercises = exercises?.slice(indexOfFirstExercise, indexOfLastExercise);
   
     const paginate = (_event:React.BaseSyntheticEvent,value:number) => {
       console.log(event,"value");
@@ -49,17 +50,18 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
       
       window.scrollTo({ top: 1800, behavior: 'smooth' });
     };
-  
+    
   return (
     
     <div className='w-full flex  flex-col justify-center items-center flex-wrap bg-[#101112f5]'>
     <h1 className='text-orange-400 md:text-6xl text-3xl mt-11 mb-11
     '>Showing Results</h1>
     <div className='w-full flex justify-center items-center flex-wrap gap-7'>
-      {currentExercises.map((exercise, idx) => (
+      {currentExercises?.map((exercise, idx) => (
         <ExerciseCard key={idx} item={exercise} />
       ))}
     </div>
+    {exercises&&(
     <div className='mt-11 pb-11' >
       {exercises.length > 9 && (
         <Pagination
@@ -73,6 +75,7 @@ const Exercises = ({ exercises,bodyPart,setExersise}:Props) => {
         />
       )}
     </div>
+    )}
   </div>
     
   )

@@ -5,8 +5,9 @@ import Exercises from "../components/Exercises"
 import SearchExercises from "../components/SearchExercises"
 import Newsletter from "../components/Newsletter"
 import BMI from "../components/BMI"
+import{ExercisesType} from "../components/Exercises"
 const Home = () => {
-  const [exercises, setExersise] = useState<string[]>([]);
+  const [exercises, setExersise] = useState<ExercisesType[]>();
   const [bodyPart, setBodyPart] = useState<string>("all");
 
   return (

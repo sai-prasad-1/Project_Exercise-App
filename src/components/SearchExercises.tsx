@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchData,Exersiseoptions } from "../utils/fetchData";
 import HorizontalScrollBar from "./HorizontalScrollBar";
-
+import {ExercisesType} from "./Exercises"
 interface ExersiseSearch{
   name:string;
   target:string;
@@ -12,7 +12,7 @@ interface ExersiseSearch{
 interface Props{
   setBodyPart: React.Dispatch<React.SetStateAction<string>>,
   bodyPart: string,
-  setExersise: React.Dispatch<React.SetStateAction<string[]>>,
+  setExersise: React.Dispatch<React.SetStateAction<ExercisesType[] | undefined>>,
 }
 const SearchExercises = ({ bodyPart,setBodyPart,setExersise}:Props) => {
 
