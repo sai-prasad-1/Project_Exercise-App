@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://hanoverfitness.netlify.app)
 
 There are many great websites for workout available  however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a webapp so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -85,8 +85,9 @@ Of course,this will not serve all your needs  since your needs may be different.
 
 
 * [![React][React.js]][React-url]
-* [![Tailwind Css][TailwinCss]][Tailwind-url]
-* [![Tailwind Css][TypeScript]][typescript-url]
+* <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Logo" width="800" height="80">
+* <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="Logo" width="800" height="80">
+
 
 
 
