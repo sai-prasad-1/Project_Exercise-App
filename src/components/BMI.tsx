@@ -57,7 +57,7 @@ const BMI = () => {
                     <div className="text-white  text-2xl pl-8 " ref={result}>
                         
                     </div>
-                    <input type="button" value="Calculate" className="text-white bg-orange-400  rounded-3xl w-[100px] h-[50px]" onClick={(e)=>calculate(weight.current?.value,height.current?.value,e)} />
+                    <input type="button" value="Calculate" className="text-black bg-orange-400  rounded-3xl w-[100px] h-[50px]" onClick={(e)=>calculate(weight.current?.value,height.current?.value,e)} />
                 </div>
                 <div className="right md:block hidden"></div>
             </div>

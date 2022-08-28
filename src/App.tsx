@@ -11,8 +11,12 @@ import './App.css'
 import Footer from './components/Footer';
 
 function App() {
+  window.addEventListener('load', (_event) => {
+    console.log('page is fully loaded');
+  });
   return (
    <div className='overflow-x-clip'>
+
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>} />

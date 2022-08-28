@@ -13,7 +13,15 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
-
+#loader{
+  width: 100vw;
+  height: 100vh; 
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  background: #000;
+  transition: height  10s ease-in-out;
+}
 .search--bg{
   background: url("./assets/images/img2.jpg")  no-repeat center center ; 
   -webkit-background-size: cover;
