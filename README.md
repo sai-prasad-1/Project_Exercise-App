@@ -84,9 +84,7 @@ Of course,this will not serve all your needs  since your needs may be different.
 
 
 
-* [![React][React.js]][React-url]
-* <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Logo" width="800" height="80">
-* <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="Logo" width="800" height="80">
+[![React][React.js]][React-url] <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Logo" width="800" height="80"> <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="Logo" width="800" height="80">
 
 
 
