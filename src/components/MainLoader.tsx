@@ -16,9 +16,7 @@ const LoaderUi = ()=>{
     // let reqData: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined;
 if(dataRef){
     const observer2 = new PerformanceObserver((entries) => {
-        let data = dataRef.current
-        console.log(data);
-        
+        let data = dataRef.current        
         entries.getEntriesByType("resource").forEach(res =>{
             if (data) {
                 data.innerText = res.toJSON().name;
@@ -31,17 +29,24 @@ if(dataRef){
 
 window.addEventListener('load',()=>{
     if (loader) {
-        console.log(loader.children);
         const parent = dataRef.current.parentElement?.parentElement
         if (parent) {
-            parent.style.display = "none"
+            loader.classList.add("loader--animation")
+            setTimeout(()=>{
+
+                
+                parent.style.display = "none"
+            },3000)
+            setTimeout(()=>{
+
+                const loadStyle =loader.style
+                loadStyle.display = "none"
+              
+            },4000)
+            
         }
-        const loadStyle =loader.style
        
-            loadStyle.width= (0) + "%"
-            // loadStyle.display = "none"
-        
-        
+            // loadStyle.width= (0) + "%"
     }
 })
     return(

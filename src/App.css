@@ -22,6 +22,9 @@ body {
   background: #000;
   transition: height  10s ease-in-out;
 }
+.loader--animation{
+  animation: loader 4s ease-in  1  ;
+}
 .search--bg{
   background: url("./assets/images/img2.jpg")  no-repeat center center ; 
   -webkit-background-size: cover;
@@ -125,4 +128,14 @@ body {
   .exercise-card {
     width: 280px;
   }
+}
+
+@keyframes loader {
+  from{
+  height: 100vh;
+  }
+  to{
+    height: 0vh;
+  }
+  
 }
